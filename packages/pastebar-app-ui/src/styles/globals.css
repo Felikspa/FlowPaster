@@ -75,12 +75,14 @@ input[type='number']::-webkit-inner-spin-button {
   overflow: hidden;
 }
 
-.quick-paste-document.dark {
+.quick-paste-document.dark,
+.quick-paste-document.dark .quick-paste-body,
+.quick-paste-document.dark .quick-paste-body #root {
   --quick-paste-active-mask-color: var(--quick-paste-dark-mask-color);
   --quick-paste-active-mask-strength: var(--quick-paste-dark-mask-strength);
   --quick-paste-primary-text: #ffffff;
   --quick-paste-secondary-text: #6c6c6c;
-  --quick-paste-separator-color: #6c6c6c;
+  --quick-paste-separator-color: var(--quick-paste-secondary-text);
   --quick-paste-hotkey-text: rgb(255 255 255 / 50%);
   --quick-paste-hotkey-bg: rgb(138 138 138 / 7%);
   --quick-paste-selected-text: #ffffff;
@@ -184,7 +186,7 @@ input[type='number']::-webkit-inner-spin-button {
   height: 1px;
   margin: 0 12px 8px;
   flex: 0 0 1px;
-  background: var(--quick-paste-separator-color);
+  background: var(--quick-paste-secondary-text);
 }
 
 .flow-launcher-results {
@@ -213,11 +215,11 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 .flow-launcher-results--scrolling {
-  scrollbar-color: #6c6c6c transparent;
+  scrollbar-color: var(--quick-paste-secondary-text) transparent;
 }
 
 .flow-launcher-results--scrolling::-webkit-scrollbar-thumb {
-  background: #6c6c6c;
+  background: var(--quick-paste-secondary-text);
 }
 
 .flow-launcher-result-item {
